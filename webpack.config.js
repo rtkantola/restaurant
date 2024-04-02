@@ -14,6 +14,12 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        
+        
+      },
     ],
   },
   devServer: {
@@ -23,8 +29,8 @@ plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html',
     })
-],
-optimization: {
-    runtimeChunk: 'single',
-  },
-};
+  ],
+  // optimization: {
+  //     runtimeChunk: 'single',
+  //   },
+  };
